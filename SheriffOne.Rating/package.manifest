@@ -1,0 +1,14 @@
+{   
+    propertyEditors: [      
+        {
+            alias: "SheriffOne.Rating",
+            name: "Rating",
+            editor: {
+                view: "~/App_Plugins/SheriffOne.Rating/rating.html"
+            }
+        }
+    ],
+    javascript: [
+        '~/App_Plugins/SheriffOne.Rating/rating.controller.js'
+    ]
+}
