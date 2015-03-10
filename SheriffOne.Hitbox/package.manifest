@@ -1,0 +1,14 @@
+{   
+    propertyEditors: [      
+        {
+            alias: "SheriffOne.Hitbox",
+            name: "Hitbox",
+            editor: {
+                view: "~/App_Plugins/SheriffOne.Hitbox/hitbox.html"
+            }
+        }
+    ],
+    javascript: [
+        '~/App_Plugins/SheriffOne.Hitbox/hitbox.controller.js'
+    ]
+}
