@@ -1,5 +1,9 @@
 <div ng-controller="SheriffOne.Hitbox">
-    <input ng-model="model.value.linktext" type="text" name="linktext" id="linktext" value="" />
-    <input ng-model="model.value.media.id" type="text" name="media" id="media" value="" />
-    <a href="#clickedMediaPicker" ng-click="PickMedia($event)" id="mediaPicker" name="mediaPicker">Pick media</a>
+    <a href="#" ng-click="Reset($event)">Reset</a>
+    <div ng-repeat="hitbox in model.value track by $index">
+        <input ng-model="hitbox.linktext" type="text" name="linktext-{{$index}}" id="linktext-{{$index}}" value="" />
+        <input ng-model="hitbox.media.id" type="text" name="media-{{$index}}" id="media-{{$index}}" value="" />
+        <a href="#clickedMediaPicker" ng-click="PickMedia($event, $index)" id="mediaPicker-{{$index}}" name="mediaPicker-{{$index}}">Pick media</a>
+    </div>
+    <button ng-click="AddHitBox($event)" ng-disabled="model.value.length >= 4">Add Hitbox</button>
 </div>
